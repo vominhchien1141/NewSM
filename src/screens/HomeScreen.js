@@ -181,7 +181,7 @@ const HomeScreen = () => {
                                 <Picker
                                     selectedValue={selectedValue}
                                     onValueChange={(itemValue) => setSelectedValue(itemValue)}
-                                    style={{ width: 150, height: 40, borderRadius: 10, padding: 10 }}
+                                    style={{ width: 140, height: 40, borderRadius: 10, padding: 10, backgroundColor:'white' }}
                                 >
                                     <Picker.Item label="Chọn loại cây" value="" />
                                     <Picker.Item label="Xà lách" value="xalach" />
@@ -215,10 +215,10 @@ const HomeScreen = () => {
 
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <Pressable onPress={handleStartPlanting} style={{ width: 100, height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', borderRadius: 10 }}>
+                        <Pressable onPress={handleStartPlanting} style={{ width: 90, height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', borderRadius: 10 }}>
                             <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Bắt đầu</Text>
                         </Pressable>
-                        <Pressable onPress={handleResetPlanting} style={{ width: 100, height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', borderRadius: 10, marginLeft: -20 }}>
+                        <Pressable onPress={handleResetPlanting} style={{ width: 90, height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white', borderRadius: 10, marginLeft: 5 }}>
                             <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Xóa ngày</Text>
                         </Pressable>
                         <View>

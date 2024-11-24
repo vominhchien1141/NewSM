@@ -13,7 +13,7 @@ const LedScreen = () => {
     const [PlantingDate, setPlantingDate] = useState(null);
     const [daysPlanted, setDaysPlanted] = useState(0);
 
-    
+
     const [autoControls, setAutoControls] = useState([
         { enable: false, startHour: 19, startMin: 10, repeat: 0 }, // Sáng
         { enable: false, startHour: 12, startMin: 0, repeat: 0 }, // Trưa
@@ -43,7 +43,7 @@ const LedScreen = () => {
         updatedControls[index] = newSettings;
         setAutoControls(updatedControls);
         const PlantingDate = calculateDaysPlanted(currentDate); // Tính số ngày đã trồng
-      
+
         setPlantingDate(currentDate); // Cập nhật lại plantingDate
         // Send updated state to the WebSocket
         handleSendJson({ autoControl: updatedControls, PlantingDate });
@@ -56,12 +56,12 @@ const LedScreen = () => {
     const storePlantStartDate = async () => {
         try {
             const currentDate = new Date().toISOString(); // Lưu ngày dưới dạng ISO
-            await AsyncStorage.setItem('plantStartDate', currentDate);     
+            await AsyncStorage.setItem('plantStartDate', currentDate);
         } catch (error) {
             console.error('Error saving plant start date', error);
         }
     };
-    
+
     const getPlantStartDate = async () => {
         try {
             const storedDate = await AsyncStorage.getItem('plantStartDate');
@@ -73,7 +73,7 @@ const LedScreen = () => {
         }
         return null;
     };
-    
+
 
 
     useEffect(() => {
@@ -89,10 +89,11 @@ const LedScreen = () => {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" backgroundColor={Colors.background} />
+            <View style={styles.header}>
+                <Text style={styles.txtHeader}>Tự động hóa</Text>
+            </View>
             <ScrollView contentContainerStyle={styles.scrollContainer}>
-                <View style={styles.header}>
-                    <Text style={styles.txtHeader}>Tự động hóa</Text>
-                </View>
+
 
                 <View style={styles.footer}>
                     {autoControls.map((control, index) => (
@@ -113,10 +114,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.background,
+       
     },
     scrollContainer: {
         flexGrow: 1,
         paddingBottom: 20,
+        height: '100%'
     },
     header: {
         width: '100%',
