@@ -1,5 +1,5 @@
 {
-  "name": "vivarium",
+  "name": "smartgarden",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -24,7 +24,7 @@
     "@react-native-picker/picker": "2.7.5",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
-    "@react-navigation/native-stack": "^6.9.26",
+    "@react-navigation/native-stack": "^6.11.0",
     "@reduxjs/toolkit": "^2.2.4",
     "antd": "^5.17.0",
     "expo": "~51.0.11",

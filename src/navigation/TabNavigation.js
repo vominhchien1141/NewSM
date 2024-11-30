@@ -3,6 +3,7 @@ import HomeScreen from '../screens/HomeScreen';
 import BulbScreen from '../screens/BulbScreen';
 import RgbNavigation from './RgbNavigation';
 import DewScreen from '../screens/DewScreen';
+
 import {Image, View} from 'react-native';
 import Colors from '@/theme/Colors';
 import SettingScreen from "@/src/screens/SettingScreen";

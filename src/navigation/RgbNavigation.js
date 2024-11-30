@@ -1,7 +1,8 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import LedScreen from '../screens/LedScreen';
 import RegimeLed from '../screens/RegimeLed';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 

@@ -175,7 +175,7 @@ const HomeScreen = () => {
                             <Text style={{ fontSize: 26, fontWeight: 'bold', color: 'white' }}>{temperature}°C</Text>
                             <Text style={{ fontSize: 10, color: 'white', marginTop: -5 }}> Nhiệt độ</Text>
                         </View>
-                        <View style={{ flexDirection: 'row' }}>
+                        {/* <View style={{ flexDirection: 'row' }}>
                             <View style={{
                             }}>
                                 <Picker
@@ -200,7 +200,7 @@ const HomeScreen = () => {
                             }}>
                                 <Image source={require('../../assets/icons/plus.png')} style={{ width: 16, height: 16 }} />
                             </View>
-                        </View>
+                        </View> */}
                     </View>
                     <View style={{ height: 0.5, borderWidth: 1, borderColor: "black", borderStyle: 'solid' }} />
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
