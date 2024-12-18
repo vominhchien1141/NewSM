@@ -18,17 +18,17 @@ const LoginScreen = ({navigation}) => {
     useEffect(() => {
         for (let i = 1; i <= 200; i++) {
             try {
-                const socket = new WebSocket(`ws://192.168.100.${i}:81`);
+                const socket = new WebSocket(`ws://172.20.10.${i}:81`);
 
                 socket.onmessage = (event) => {
                     const json = JSON.parse(event.data);
 
                     if (json.Name) {
                         setDevices((prev) => {
-                            if (!prev.find(device => device.ip === `192.168.100.${i}`)) {
+                            if (!prev.find(device => device.ip === `172.20.10.${i}`)) {
                                 return [...prev, {
                                     id: i,
-                                    ip: `192.168.100.${i}`,
+                                    ip: `172.20.10.${i}`,
                                     name: json.Name
                                 }];
                             }
